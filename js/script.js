@@ -1,24 +1,45 @@
-// Get the image elements
-const images = document.querySelectorAll('.grid-image');
+// Get all thumbnail images
+const thumbnails = document.querySelectorAll('.grid-image');
 
-// Add click event listener to each image
-images.forEach(image => {
-  image.addEventListener('click', showSingleImage);
+// Add click event listener to each thumbnail
+thumbnails.forEach((thumbnail) => {
+  thumbnail.addEventListener('click', showFullImage);
 });
 
-// Function to show a single image
-function showSingleImage(event) {
-  // Get the clicked image source
+// Function to show the full-size image
+function showFullImage(event) {
+  event.preventDefault(); // Prevent the default behavior of the anchor tag
+
+  // Get the clicked thumbnail image source
   const clickedImageSrc = event.target.src;
 
-  // Create a new image element
-  const singleImage = document.createElement('img');
-  singleImage.src = clickedImageSrc;
+  // Create a new image element for the full-size image
+  const fullImage = document.createElement('img');
+  fullImage.src = clickedImageSrc;
+  fullImage.classList.add('full-image'); // Add the "full-image" class
 
-  // Clear the existing images in the gallery
-  const galleryContainer = document.querySelector('.gallery-container');
-  galleryContainer.innerHTML = '';
+  // Clear the existing image in the container
+  const imageContainer = document.querySelector('.image-container');
+  imageContainer.innerHTML = '';
 
-  // Append the single image to the gallery container
-  galleryContainer.appendChild(singleImage);
+  // Append the full-size image to the container
+  imageContainer.appendChild(fullImage);
+
+  // Show the image container
+  imageContainer.style.display = 'flex';
 }
+
+// Get the image container element
+const imageContainer = document.querySelector('.image-container');
+
+// Add click event listener to the image container
+imageContainer.addEventListener('click', hideFullImage);
+
+// Function to hide the full-size image and image container
+function hideFullImage(event) {
+  // Check if the click event occurred outside the image
+  if (event.target === imageContainer) {
+    imageContainer.style.display = 'none';
+  }
+}
+

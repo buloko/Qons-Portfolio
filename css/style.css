@@ -37,7 +37,15 @@
 
  
 .full-image {
-  display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 5px;
+    z-index: 9999;
+  
 }
 
 .image-container {
@@ -47,14 +55,16 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
-  display: flex;
+  display: none; /* Hide the image container by default */
   justify-content: center;
   align-items: center;
   z-index: 9999;
 }
+
 
 .image-container img {
   max-width: 90%;
   max-height: 90%;
   border-radius: 5px;
 } 
+
