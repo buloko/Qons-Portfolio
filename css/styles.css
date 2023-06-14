@@ -1,0 +1,9 @@
+@import './index.css';
+@import './bio.css';
+@import './contact.css';
+
+/* Import Tailwind CSS */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+

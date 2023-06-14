@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $contact = $_POST["contact"];
   $message = $_POST["message"];
 
-  $to = "q2murphy@gmai.com"; // Replace with your email address
+  $to = "q2murphy@gmai.com"; 
   $subject = "New Contact Form Submission";
   $body = "Name: $name\nEmail: $email\nContact: $contact\nMessage: $message";
 
@@ -16,5 +16,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   } else {
     echo "Oops! Something went wrong. Please try again.";
   }
-}
+};
 ?>
