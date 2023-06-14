@@ -1,5 +1,5 @@
 // Get the image elements
-const images = document.querySelectorAll('.gallery-image');
+const images = document.querySelectorAll('.grid-image');
 
 // Add click event listener to each image
 images.forEach(image => {
