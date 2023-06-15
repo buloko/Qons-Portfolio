@@ -2,12 +2,13 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $name = $_POST["name"];
   $email = $_POST["email"];
-  $contact = $_POST["contact"];
+  $telephone = $_POST["telephone"];
+  $subject = $_POST["subject"];
   $message = $_POST["message"];
 
   $to = "q2murphy@gmai.com"; 
   $subject = "New Contact Form Submission";
-  $body = "Name: $name\nEmail: $email\nContact: $contact\nMessage: $message";
+  $body = "Name: $name\nEmail: $email\nTelephone: $telephone\nSubject: $subject\nMessage: $message";
 
   $headers = "From: $email";
 
