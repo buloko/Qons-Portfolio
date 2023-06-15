@@ -90,15 +90,17 @@
   border-radius: 5px;
 }
 
-.imageme {
-  max-width: 50%;
-  max-height: 25%;
-  justify-content: right;
+.bio-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.bio-image { 
+  max-width: 800px;
+  max-height: 800px;
 }
 
-aside {
-  float: right;
-}
 
 *,
 *:before,
